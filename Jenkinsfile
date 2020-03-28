@@ -2,19 +2,12 @@
 // ----------------------------------------------------------------------
 // This is as simple as it gets with declarative pipeline
 // ----------------------------------------------------------------------
-pipeline {
-  agent any parameters {
+  pipeline {
+  agent any
+  parameters {
     choice(
-      name: 'Env',
-      choices: ['DEV', 'QA', 'UAT', 'PROD'],
-      description: 'Passing the Environment'
-    )
+        name: 'myParameter',
+        choices: "Option1\nOption2",
+        description: 'interesting stuff' )
   }
-   stages {
-      stage('Say Hello') {
-         steps {
-            echo 'Hello World!'
-         }
-      }
-   }
 }
