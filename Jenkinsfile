@@ -10,4 +10,11 @@
         choices: "Option1\nOption2",
         description: 'interesting stuff' )
   }
+  stages {
+    stage('Environment') {
+      steps {
+        echo " The environment is ${params.myParameter}"
+      }
+    }
+  }
 }
