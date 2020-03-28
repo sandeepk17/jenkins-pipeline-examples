@@ -7,7 +7,7 @@
   parameters {
     choice(
         name: 'myParameter',
-        choices: "Option1\nOption2",
+        choices: ['DEV', 'QA', 'UAT', 'PROD'],
         description: 'interesting stuff' )
   }
   stages {
