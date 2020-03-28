@@ -15,6 +15,7 @@
     stage('Environment') {
       steps {
         echo " The environment is ${params.myParameter}"
+        echo " The environment is ${params.defaultParam2}"
       }
     }
   }
