@@ -5,6 +5,7 @@
   pipeline {
   agent any
   parameters {
+    string(defaultValue: "defaultParam2", description: 'What is defaultParam2 ?', name: 'defaultParam2')
     choice(
         name: 'myParameter',
         choices: ['DEV', 'QA', 'UAT', 'PROD'],
